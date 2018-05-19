@@ -38,6 +38,17 @@ namespace NumberGuesser
                 string input = Console.ReadLine();
 
                 // Make sure its a number
+                if(!int.TryParse(input, out guess)){
+                    // Change Text Color
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    // Tell user its not a number
+                    Console.WriteLine("Please enter an actual numer");
+                    // Reset Text Color
+                    Console.ResetColor();
+
+                    // Keep Going
+                    continue;
+                }
 
                 //Cast to int and put in guess
                 guess = Int32.Parse(input);
