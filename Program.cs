@@ -49,7 +49,7 @@ namespace NumberGuesser
 
                     if (guess != correctNumber)
                     {
-                       // Print error message
+                        // Print error message
                         PrintColorMessage(ConsoleColor.Red, "Wrong Number, please try again");
                     }
                 }
@@ -62,11 +62,13 @@ namespace NumberGuesser
 
                 // Get Answer
                 string answer = Console.ReadLine().ToUpper();
-                if (answer == "Y") {
+                if (answer == "Y")
+                {
                     continue;
                 }
-                else if (answer == "N") {
-                    return;  
+                else if (answer == "N")
+                {
+                    return;
                 }
                 else
                 {
@@ -75,7 +77,8 @@ namespace NumberGuesser
             }
         }
         // Get and display app info
-        static void GetAppInfo() {
+        static void GetAppInfo()
+        {
             // Set app vars
             string appName = "Number Guesser";
             string appVersion = "1.0.0";
@@ -86,9 +89,10 @@ namespace NumberGuesser
             Console.WriteLine("{0}: Version {1} by {2}", appName, appVersion, appAuthor);
             // Reset Text Color
             Console.ResetColor();
-            
+
         }
-        static void GreetUser() {
+        static void GreetUser()
+        {
             // Ask users name
             Console.WriteLine("What is your name?");
             // Get user input
@@ -97,7 +101,8 @@ namespace NumberGuesser
 
         }
         // Print color message
-        static void PrintColorMessage(ConsoleColor color, string message) {
+        static void PrintColorMessage(ConsoleColor color, string message)
+        {
             // Change Text Color
             Console.ForegroundColor = color;
 
